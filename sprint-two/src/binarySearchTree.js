@@ -49,6 +49,7 @@ bstMethods.depthFirstLog = function(callback) {
   // this.right depthSearch
 };
 
+
 /*
  * Complexity: What is the time complexity of the above functions?
  */

@@ -58,13 +58,10 @@ describe('set', function() {
     expect(set._storage).to.eql([{1: 2}, {1: 2}, [1, 2], [1, 2]]);
     
   });
-  
-  it('should add two deeply equal arrays', function() {
-    set.add([1, 'dog', true]);
-    expect(set.size()).to.equal(2);
-  });
+
   it('should not add two strictly identical arrays', function() {
     var testArray = [1, 'dog', true];
+    set.add(testArray);
     set.add(testArray);
     expect(set.size()).to.equal(1);
   });
@@ -87,4 +84,5 @@ describe('set', function() {
     set.add(b);
     expect(set.contains(a)).to.equal(true);
     expect(set.contains(b)).to.equal(true);
+  });
 });
